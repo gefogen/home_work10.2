@@ -30,7 +30,10 @@ def page_candidate(id):
 def page_skills(skill):
     men = ""
     for people in content:
-        if skill in people['skills'].lower():
+        chel = people["skills"].lower().split(", ")
+        print(chel)
+
+        if skill in chel:
             men += "Имя кандидата - " + people['name'] + "\n" + \
                    "Позиция кандидата - " + people['position'] + "\n" + \
                    "Навыки через запятую - " + people['skills'] + "\n\n\n"
