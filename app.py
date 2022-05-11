@@ -31,8 +31,6 @@ def page_skills(skill):
     men = ""
     for people in content:
         chel = people["skills"].lower().split(", ")
-        print(chel)
-
         if skill in chel:
             men += "Имя кандидата - " + people['name'] + "\n" + \
                    "Позиция кандидата - " + people['position'] + "\n" + \
